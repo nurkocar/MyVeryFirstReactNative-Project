@@ -6,32 +6,40 @@ import MyComponent from './components/MyComponent';
 
 const App = () => {
 
+  const myName = 'Nur';
+  const isAdmin = true;
+
   function myFunction(){
-    const myName = 'Nur';
-    return <Text style={styles.div}>Firtina basliyoooorrrrr!!</Text>;
-  };
+
+    return <Text style={styles.div}> Firtina basliyoooorrrrr!! </Text>
+
+  }
 
   function myFunc(){
-    const isAdmin = true;
-    if (isAdmin){
-      return <Text style={{fontSize:20}}>Admin Kullanicisi</Text>;
-    }else{
-      return null;
-    }
-  };
 
-  function myFun(userName){
-    return <Text>{userName}</Text>;
-  };
+    if (isAdmin){
+      return <Text style={{fontSize:20}}> Admin Kullanicisi </Text>
+    }else{
+      return null
+    }
+
+  }
+
+  function myFun(congrats){
+
+    return <Text>{congrats}</Text>
+
+  }
 
   function myArray(){
 
     const myArr = ['Izmir', 'Istanbul', 'Ankara', 'Adana'];
 
     return myArr.map((city) => {
-      return <Text>{city} Sehri</Text>;
-    });
-  };
+      return <Text>{city} Sehri</Text>
+    })
+
+  }
 
 
   return (
@@ -44,17 +52,18 @@ const App = () => {
 
       <MyComponent />
 
-      {myFunction()};
+      {myFunction()}
 
-      <Text style={styles.divText}>Hosgeldin {myName} ✌</Text>;
+      <Text style={styles.divText}>Hosgeldin {myName} ✌</Text>
 
-      {myFunc()};
+      {myFunc()}
 
       <Text style={styles.divText2}>React Native Modul 1: Giris</Text>
 
       {myFun('Hooooray!')}
 
-      {myArray()};
+      {myArray()}
+      
     </View>
 
     //</>
